@@ -235,13 +235,15 @@
             // ╰─────────────────────────────╯         ╰──────────────────────────────╯  ╰─────────────────────────────────╯           ╰────────────────────────────────╯
 
             bindings = <
-&kp ESC    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                          &kp F6     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&kp CAPS   &knone   &none    &none   &none   &none                           &none      &none   &none   &none   &none    &kp F12
-&kp LCTRL  &none    &none    &none   &none   &none      &kp K_MUTE  &kp MB3  &none      &none   &none   &none   &none    &none
-&kp SHIFT  &kp WIN  &kp ALT  &none   &mo 2   &kp SPACE                       &kp ENTER  &mo 3   &none   &none   &none    &none
+&kp ESC         &kp F1        &kp F2        &kp F3  &kp F4  &kp F5                        &kp F6     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&kp CAPS        &none         &none         &none   &none   &none                         &none      &none   &none   &none   &none    &kp F12
+&kp LCTRL       &none         &none         &none   &none   &none      &kp K_MUTE  &none  &none      &none   &none   &none   &none    &none
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &none   &mo 2   &kp SPACE                     &kp ENTER  &mo 3   &none   &none   &none    &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_NEXT K_PREV>;
         };
 
         Adjust_layer {
